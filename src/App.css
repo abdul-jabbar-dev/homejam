@@ -10,7 +10,9 @@ html {
 
 .topSection {
   /* background-image: url(./Media/bg.png); */
-  background: url(./Media/bg1.png)/* , linear-gradient(180deg, rgba(5, 11, 20, 0.133) 10%, #0a0b1a 80.53%, #0A0B1A 90.33%, #0A0B1A) */;
+  background: url(./Media/bg1.png)
+    /* , linear-gradient(180deg, rgba(5, 11, 20, 0.133) 10%, #0a0b1a 80.53%, #0A0B1A 90.33%, #0A0B1A) */
+  ;
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -39,6 +41,19 @@ html {
 
   .topTitle {
     padding-top: 100px;
+  }
+
+  .actorsBc::before {
+    left: 2px;
+    content: "";
+    position: absolute;
+    height: 92%;
+    width: 08%;
+    top: 12px;
+    z-index: -1;
+    background: linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%);
+    background-color: red;
+    border-radius: 8px;
   }
 }
 
@@ -119,6 +134,26 @@ html {
   z-index: -1;
   background: linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%);
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .actorsBc::before {
+    left: 4px;
+    height: 92%;
+    width: 290px;
+    top: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1000px) {
+  .actorsBc::before {
+    left: 4px;
+    height: 92%;
+    width: 292px;
+    top: 12px;
+  }
+
 }
 
 .reviewsBc {
