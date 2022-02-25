@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:ital,wght@0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+
+.topSection {
+  /* background-image: url(./Media/bg.png); */
+  background: url(./Media/bg.png), linear-gradient(180deg, rgba(5, 11, 20, 0.28) 0%, rgba(0, 15, 39, 0.69) 47.53%, #000000 90.33%, #000105);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  /* mask-image: linear-gradient(180deg, rgba(5, 11, 20, 0.28) 0%, rgba(1, 13, 32, 0.69) 67.53%, #0A0B1A 85.33%); */
+}
+
+
+.topTitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 80px;
+  color: white;
+  margin: 0;
+  line-height: 96px;
+  font-weight: 400;
+}
+
+.fancy-border {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.658);
+  border-radius: 50%;
+  border-top: 1px solid rgb(212, 0, 255);
+  border-right: 1px solid rgb(212, 0, 255);
+  border-bottom: 1px solid rgb(212, 0, 255);
+
+}
+
+.border {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.658);
+  border-radius: 50%;
+
+
+}
+
+.underLine {
+  display: inline-block;
+  position: relative;
+  font-weight: 200;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.underLine:after {
+  background: #0259EB;
+  border-radius: 10px;
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 40%;
+  bottom: -6px;
+  margin: 0 auto;
+}
+
+.iconRou {
+  transform: rotate(90deg);
+  cursor: pointer;
+  font-size: 6rem;
+  color: #C434D9;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.actorsBc::before {
+  left: 2px;
+  content: "";
+  position: absolute;
+  height: 92%;
+  width: 80%;
+  top: 12px;
+  z-index: -1;
+  background: linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%);
+  border-radius: 8px;
+}
+
+.reviewsBc {
+  outline: 3px solid #E5AF56;
+}
+
+.reviewsBc::before {
+  left: 8px;
+  content: "";
+  position: absolute;
+  height: 89%;
+  width: 371px;
+  top: 7px;
+  z-index: -1;
+  background: linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%);
+  border-radius: 16px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
