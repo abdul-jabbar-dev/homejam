@@ -22,7 +22,7 @@ const MidSection = () => {
     }, [])
     return (
         <Container maxWidth="xl" >
-            <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} my={4}>
+            <Box display={'flex'}  justifyContent={'space-between'} alignItems={'center'} mt={15} mb={4}>
                 <h2 className='underLine' >Upcoming Shows</h2>
                 <Typography color={'#E5C558'}>View All</Typography>
             </Box>
