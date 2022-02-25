@@ -75,13 +75,16 @@ const MidSection = () => {
                     breakpoints={{
                         "@0.00": {
                             slidesPerView: 1,
-                            spaceBetween: 20,
+                            spaceBetween: 60,
                         }, "@0.40": {
                             slidesPerView: 1,
                             spaceBetween: 20,
+                        }, "@0.60": {
+                            slidesPerView: 1.2,
+                            spaceBetween: 20,
                         },
                         "@0.75": {
-                            slidesPerView: 1.5,
+                            slidesPerView: 1.6,
                             spaceBetween: 10,
                         },
                         "@1.00": {

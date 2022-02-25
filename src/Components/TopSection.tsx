@@ -10,7 +10,13 @@ const TopSection = () => {
     return (
         <Box className='topSection' sx={{ height: '100vh' }} >
             <Container maxWidth={'xl'}>
+
+                {/* Navigation bar */}
                 <NavBar></NavBar>
+
+
+
+                {/* top body */}
                 <Box my={'15%'}>
                     <h1 className='topTitle'>
                         Cari Cari
@@ -19,8 +25,7 @@ const TopSection = () => {
                         Live from their sofa to yours. Get closer to your favorite artists, and never miss out.
                     </Typography>
                 </Box>
-            </Container>
-            <Container maxWidth={'xl'}>
+
                 <Box display={'flex'} justifyContent={'space-evenly'}>
                     {/* sate slider swiper */}
                     <Swiper
