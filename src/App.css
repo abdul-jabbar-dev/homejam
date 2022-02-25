@@ -10,22 +10,36 @@ html {
 
 .topSection {
   /* background-image: url(./Media/bg.png); */
-  background: url(./Media/bg.png), linear-gradient(180deg, rgba(5, 11, 20, 0.28) 0%, rgba(0, 15, 39, 0.69) 47.53%, #000000 90.33%, #000105);
+  background: url(./Media/bg1.png)/* , linear-gradient(180deg, rgba(5, 11, 20, 0.133) 10%, #0a0b1a 80.53%, #0A0B1A 90.33%, #0A0B1A) */;
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
-  background-blend-mode: overlay;
+  /* background-blend-mode: overlay; */
   /* mask-image: linear-gradient(180deg, rgba(5, 11, 20, 0.28) 0%, rgba(1, 13, 32, 0.69) 67.53%, #0A0B1A 85.33%); */
 }
 
 
 .topTitle {
   font-family: 'Libre Baskerville', serif;
-  font-size: 80px;
+  /* font-size: 80px; */
   color: white;
   margin: 0;
+  font-size: calc(8px + 10vmin);
   line-height: 96px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 1100px) {
+  .topSubTitle {
+    font-size: calc(8px + 2vmin) !important;
+    width: 80% !important;
+    padding-bottom: 20px;
+
+  }
+
+  .topTitle {
+    padding-top: 100px;
+  }
 }
 
 .fancy-border {
@@ -83,10 +97,16 @@ html {
 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .actorsBc::before {
@@ -109,21 +129,10 @@ html {
   left: 8px;
   content: "";
   position: absolute;
-  height: 89%;
-  width: 371px;
+  height: 88%;
+  width: 405px;
   top: 7px;
   z-index: -1;
   background: linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%);
   border-radius: 16px;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }

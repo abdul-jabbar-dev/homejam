@@ -11,6 +11,8 @@ interface MyCodeParams {
     }
 }
 const Reviews: FC<MyCodeParams> = ({ user }) => {
+
+
     return (
 
         <Card
@@ -18,7 +20,7 @@ const Reviews: FC<MyCodeParams> = ({ user }) => {
             sx={{
 
                 my: '20px',
-                maxWidth: '370px', color: 'white', bgcolor: '#0A0B1A',
+                maxWidth: '400px', color: 'white', bgcolor: '#0A0B1A',
                 borderRadius: '16px'
             }} >
 

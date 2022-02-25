@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ConfirmationNumberOutlinedIcon from '@mui/icons-material/ConfirmationNumberOutlined';
@@ -9,10 +9,10 @@ interface MyCodeParams {
         roll: string,
         img: string
     },
-    select: Boolean,
-    SetSelect: (param: any) => void
+
 }
-const Actor: FC<MyCodeParams> = ({ user, select, SetSelect }) => {
+const Actor: FC<MyCodeParams> = ({ user, }) => {
+    const [select, SetSelect] = useState<Boolean>(false)
     return (
 
         <Card

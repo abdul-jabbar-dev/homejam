@@ -8,25 +8,25 @@ import Reviews from './Reviews';
 
 
 const MidSection = () => {
-    const [select, SetSelect] = useState<Boolean>(false)
     const [data, setData] = useState([])
     const [review, setReview] = useState([])
     useEffect(() => {
+        /* actress loacal rest api */
         (fetch('/profile.json')
             .then((e) => e.json())
             .then((data) => setData(data)));
+        /* reviwes loacal rest api */
         (fetch('/reviews.json')
             .then((e) => e.json())
             .then((data) => setReview(data)))
     }, [])
-
-
     return (
         <Container maxWidth="xl" >
             <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} my={4}>
                 <h2 className='underLine' >Upcoming Shows</h2>
                 <Typography color={'#E5C558'}>View All</Typography>
             </Box>
+            {/* actress prfile cards */}
             <Box >
                 <Swiper
                     slidesPerView={4}
@@ -36,16 +36,19 @@ const MidSection = () => {
                     }}
                     breakpoints={{
                         "@0.00": {
-                            slidesPerView: 1.3,
-                            spaceBetween: 0,
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        }, "@0.40": {
+                            slidesPerView: 1.1,
+                            spaceBetween: 5,
                         },
                         "@0.75": {
                             slidesPerView: 2.1,
                             spaceBetween: 10,
                         },
                         "@1.00": {
-                            slidesPerView: 3.1,
-                            spaceBetween: 0,
+                            slidesPerView: 2.5,
+                            spaceBetween: 10,
                         },
                         "@1.50": {
                             slidesPerView: 4,
@@ -56,46 +59,48 @@ const MidSection = () => {
                 >
 
                     {
-                        data.length > 0 ? data.map((user, index) => <SwiperSlide><Actor key={index} user={user} select={select} SetSelect={SetSelect}></Actor></SwiperSlide>) : 'LODING'
+                        data.length > 0 ? data.map((user, index) => <SwiperSlide><Actor key={index} user={user} ></Actor></SwiperSlide>) : 'LODING'
                     }
                 </Swiper>
             </Box>
+            {/* review cards */}
             <Box my={4}>
                 <h2 className='underLine' >Reviews</h2>
             </Box>
             <Box >
                 <Swiper
-
+                    style={{ padding: '0 5px' }}
                     slidesPerView={3}
-                    spaceBetween={2}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    spaceBetween={10}
                     breakpoints={{
                         "@0.00": {
-                            slidesPerView: 1.3,
-                            spaceBetween: 0,
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        }, "@0.40": {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
                         },
                         "@0.75": {
-                            slidesPerView: 2.1,
+                            slidesPerView: 1.5,
                             spaceBetween: 10,
                         },
                         "@1.00": {
-                            slidesPerView: 3.1,
-                            spaceBetween: 0,
+                            slidesPerView: 2,
+                            spaceBetween: 10,
                         },
                         "@1.50": {
-                            slidesPerView: 4,
+                            slidesPerView: 3,
                             spaceBetween: 10,
                         }
                     }}
                     className="mySwiper"
                 >
-
                     {
                         review.length > 0 ? review.map((user, index) => <SwiperSlide><Reviews key={index} user={user}></Reviews></SwiperSlide>) : 'LODING'
                     }
+
                 </Swiper>
+
             </Box>
 
         </Container >
